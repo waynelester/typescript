@@ -8,3 +8,4 @@ var Person = /** @class */ (function () {
     return Person;
 }());
 var me = new Person("Wayne", "Lester", 28, true);
+console.log(me);

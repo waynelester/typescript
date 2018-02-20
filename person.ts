@@ -15,3 +15,4 @@ class Person {
         }
 }
 let me = new Person("Wayne", "Lester", 28, true)
+console.log(me)
