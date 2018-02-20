@@ -8,7 +8,20 @@ class BankAccount {
         this.balance = balance;
         this.transactions = transactions;
     }
+    currentBalance() {
+        return this.balance;
+    }
+    withdrawnAmount(amount: number) {
+        if (this.balance > 0) {
+        this.balance -= amount;
+        this.transactions.push(this.balance);
+        }
+    }
+    depositedAmount(amount: number) {
+        this.balance += amount;
+        this.transactions.push(this.balance);
+    }
 }
 
-let patron = new BankAccount("John Smith", 50000, [200, 500, 1000]);
-console.log(patron)
+let patron = new BankAccount("John Smith", 500, [100, 200]);
+console.log(patron.withdrawnAmount(500));
