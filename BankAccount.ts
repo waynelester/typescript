@@ -11,17 +11,20 @@ class BankAccount {
     currentBalance() {
         return this.balance;
     }
-    withdrawnAmount(amount: number) {
+    withdraw(amount: number) {
         if (this.balance > 0) {
         this.balance -= amount;
         this.transactions.push(this.balance);
+        console.log("Current balance: " + this.balance)
         }
     }
-    depositedAmount(amount: number) {
+    deposit(amount: number) {
         this.balance += amount;
         this.transactions.push(this.balance);
+        console.log("Current balance: " + this.balance)
+
     }
 }
 
-let patron = new BankAccount("John Smith", 500, [100, 200]);
-console.log(patron.withdrawnAmount(500));
+let patron = new BankAccount("John Smith", 500, []);
+patron.deposit(200);
